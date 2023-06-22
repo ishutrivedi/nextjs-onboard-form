@@ -43,32 +43,6 @@ export default function Home() {
       address: formAddress
     }
 
-    // const data = {
-    //   "isCompany": "true",
-    //   "companyName": "Microsoft",
-    //   "inCareOfName": "Enoch",
-    //   "federalEmployerIdentificationNumber": "11234234",
-    //   "individualIrsTaxNumber": "12341234",
-    //   "usSsn": "112341234",
-    //   "typeOfBusiness": "Software",
-    //   "yearCompanyEstablished": "1994",
-    //   "grossAnnualIncome": "190",
-    //   "netAnnualIncome": "100",
-    //   "numEmployeesInUs": "90",
-    //   "address": {
-    //     "city": "Bellevue",
-    //     "state": "WASHINGTON",
-    //     "streetNumber": "191",
-    //     "apartmentNumber": "100",
-    //     "suiteNumber": "",
-    //     "floorNumber": "",
-    //     "zipCode": "",
-    //     "province": "ANTWERP",
-    //     "postalCode": "",
-    //     "countryCode": "1"
-    //   }
-    // }
-
     // Send the data to the server in JSON format.
     const JSONdata = JSON.stringify(data)
     console.log(JSONdata);
@@ -107,15 +81,15 @@ export default function Home() {
           Get started by entering the following details
         </p>
         <form onSubmit={handleSubmit}>
-        <div className={styles.card}>
-              <label>Company</label>
-              <input type="radio" name="isCompany" value="true" id="isCompanyTrue" />
-              <label htmlFor="isCompanyTrue">Yes</label>
-              <input type="radio" name="isCompany" value="false" id="isCompanyFalse" />
-              <label htmlFor="isCompanyFalse">No</label>
-            </div>
+          <div className={styles.card}>
+            <label>Company</label>
+            <input type="radio" name="isCompany" value="true" id="isCompanyTrue" />
+            <label htmlFor="isCompanyTrue">Yes</label>
+            <input type="radio" name="isCompany" value="false" id="isCompanyFalse" />
+            <label htmlFor="isCompanyFalse">No</label>
+          </div>
           <div className={styles.grid}>
-            
+
 
             <div className={styles.card}>
               <label>Company Name: </label>
@@ -133,49 +107,61 @@ export default function Home() {
             </div>
             <div className={styles.card}>
               <label>Individual IRS Tax Number: </label>
-              <input type="number" id="individualIrsTaxNumber" name="individualIrsTaxNumber" className={styles.homeInput}/>
+              <input type="number" id="individualIrsTaxNumber" name="individualIrsTaxNumber" className={styles.homeInput} />
             </div>
             <div className={styles.card}>
               <label>US SSN: </label>
-              <input type="number" id="usSsn" name="usSsn" className={styles.homeInput}/>
+              <input type="number" id="usSsn" name="usSsn" className={styles.homeInput} />
             </div>
             <div className={styles.card}>
               <label>Type Of Business: </label>
-              <input type="text" id="typeOfBusiness" name="typeOfBusiness" className={styles.homeInput}/>
+              <input type="text" id="typeOfBusiness" name="typeOfBusiness" className={styles.homeInput} />
             </div>
             <div className={styles.card}>
               <label>Company Established In (year): </label>
-              <input type="number" id="yearCompanyEstablished" name="yearCompanyEstablished" className={styles.homeInput}/>
+              <input type="number" id="yearCompanyEstablished" name="yearCompanyEstablished" className={styles.homeInput} />
             </div>
             <div className={styles.card}>
               <label>Gross Annual Income: </label>
-              <input type="number" id="grossAnnualIncome" name="grossAnnualIncome" className={styles.homeInput}/>
+              <input type="number" id="grossAnnualIncome" name="grossAnnualIncome" className={styles.homeInput} />
             </div>
             <div className={styles.card}>
               <label>Net Annual Income: </label>
-              <input type="number" id="netAnnualIncome" name="netAnnualIncome" className={styles.homeInput}/>
+              <input type="number" id="netAnnualIncome" name="netAnnualIncome" className={styles.homeInput} />
             </div>
 
             <div className={styles.card}>
               <label>Number of Employees in US: </label>
-              <input type="number" id="numEmployeesInUs" name="numEmployeesInUs" className={styles.homeInput}/>
+              <input type="number" id="numEmployeesInUs" name="numEmployeesInUs" className={styles.homeInput} />
             </div>
 
-            
+
           </div>
           <div className={styles.card}>
-              <label>Address</label><br></br>
-              <label>City: </label><input type="text" id="city" name="city" className={styles.homeInput}/>
-              <label>State: </label><input type="text" id="state" name="state" className={styles.homeInput}/>
-              <label>Street Number: </label><input type="text" id="streetNumber" name="streetNumber" className={styles.homeInput} />
-              <label>Apartment Number: </label><input type="text" id="apartmentNumber" name="apartmentNumber" className={styles.homeInput}/>
-              <label>Suite Number: </label><input type="text" id="suiteNumber" name="suiteNumber" className={styles.homeInput}/>
-              <label>Floor Number: </label><input type="text" id="floorNumber" name="floorNumber" className={styles.homeInput}/>
-              <label>Zip Code: </label><input type="text" id="zipCode" name="zipCode" className={styles.homeInput}/>
-              <label>Province: </label><input type="text" id="province" name="province" className={styles.homeInput}/>
-              <label>Postal Code: </label><input type="text" id="postalCode" name="postalCode" className={styles.homeInput}/>
-              <label>Country Code: </label><input type="text" id="countryCode" name="countryCode" className={styles.homeInput}/>
+            <label>Address</label>
+            <div className={styles.grid1}>
+              <div className={styles.addressInput}>
+                <label>City: </label><input type="text" id="city" name="city" className={styles.homeInput} />
+                <label>State: </label><input type="text" id="state" name="state" className={styles.homeInput} />
+              </div>
+              <div className={styles.addressInput}>
+                <label>Street Number: </label><input type="text" id="streetNumber" name="streetNumber" className={styles.homeInput} />
+                <label>Apartment Number: </label><input type="text" id="apartmentNumber" name="apartmentNumber" className={styles.homeInput} />
+              </div>
+              <div className={styles.addressInput}>
+                <label>Suite Number: </label><input type="text" id="suiteNumber" name="suiteNumber" className={styles.homeInput} />
+                <label>Floor Number: </label><input type="text" id="floorNumber" name="floorNumber" className={styles.homeInput} />
+              </div>
+              <div className={styles.addressInput}>
+                <label>Zip Code: </label><input type="text" id="zipCode" name="zipCode" className={styles.homeInput} />
+                <label>Province: </label><input type="text" id="province" name="province" className={styles.homeInput} />
+              </div>
+              <div className={styles.addressInput}>
+                <label>Postal Code: </label><input type="text" id="postalCode" name="postalCode" className={styles.homeInput} />
+                <label>Country Code: </label><input type="text" id="countryCode" name="countryCode" className={styles.homeInput} />
+              </div>
             </div>
+          </div>
           <button className={styles.submitButton} type="submit">Submit</button>
         </form>
       </main>
